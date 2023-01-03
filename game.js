@@ -33,8 +33,12 @@ function readTextFile(file, arrayName) {
 
 //let's read in the region names, depending on which map we are using
 var pageName = window.location.pathname.split("/").pop();
+console.log("pageName = " + pageName);
 if(pageName == "index.html") readTextFile('/regionLists/countryData.txt', globalCountryList);
-else if(pageName == "unitedStates.html") readTextFile('/regionLists/americanStatesData.txt', globalCountryList);
+else if(pageName == "unitedStates.html") {
+    console.log("reached0");
+    readTextFile('/regionLists/americanStatesData.txt', globalCountryList);
+}
 else if(pageName == "centralAndSouthAmerica.html") {
     var unorderedCountries = [];
     readTextFile('/regionLists/centralAndSouthAmericaCountries.txt', unorderedCountries);
