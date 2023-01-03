@@ -1,0 +1,104 @@
+Angola
+Burundi
+Benin
+Burkina Faso
+Botswana
+Central African Republic
+Ivory Coast
+Cameroon
+DR Congo
+Congo
+Djibouti
+Algeria
+Egypt
+Eritrea
+Ethiopia
+Gabon
+Ghana
+Republic of Guinea
+Gambia
+Guinea-Bissau
+Equatorial Guinea
+Kenya
+Liberia
+Libya
+Lesotho
+Morocco
+Madagascar
+Mali
+Mozambique
+Mauritania
+Malawi
+Namibia
+Niger
+Nigeria
+Rwanda
+Western Sahara
+Sudan
+South Sudan
+Senegal
+Sierra Leone
+Eswatini
+Chad
+Tunisia
+Tanzania
+Uganda
+Zambia
+Zimbabwe
+Somalia
+South Africa
+Comoros
+Cape Verde
+Curaçao
+Togo
+Seychelles
+Angola
+Burundi
+Benin
+Burkina Faso
+Botswana
+Central African Rep.
+Côte d'Ivoire
+Cameroon
+Dem. Rep. Congo
+Congo
+Djibouti
+Algeria
+Egypt
+Eritrea
+Ethiopia
+Gabon
+Ghana
+Guinea
+Gambia
+Guinea-Bissau
+Eq. Guinea
+Kenya
+Liberia
+Libya
+Lesotho
+Morocco
+Madagascar
+Mali
+Mozambique
+Mauritania
+Malawi
+Namibia
+Niger
+Nigeria
+Rwanda
+W. Sahara
+Sudan
+S. Sudan
+Senegal
+Sierra Leone
+Swaziland
+Chad
+Togo
+Tunisia
+Tanzania
+Uganda
+South Africa
+Zambia
+Zimbabwe
+Somalia
