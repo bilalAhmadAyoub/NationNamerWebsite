@@ -12,6 +12,7 @@ var gameOver = false
 
 // read in the country names from countryData.txt and add them to globalCountryList array
 function readTextFile(file, arrayName) {
+    console.log("reached");
     let rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function () {
@@ -32,9 +33,7 @@ function readTextFile(file, arrayName) {
 
 //let's read in the region names, depending on which map we are using
 var pageName = window.location.pathname.split("/").pop();
-if(pageName == "index.html"){
-    readTextFile('/regionLists/countryData.txt', globalCountryList);
-}
+if(pageName == "index.html") readTextFile('/regionLists/countryData.txt', globalCountryList);
 else if(pageName == "unitedStates.html") readTextFile('/regionLists/americanStatesData.txt', globalCountryList);
 else if(pageName == "centralAndSouthAmerica.html") {
     var unorderedCountries = [];
