@@ -14,18 +14,6 @@ console.log("reached onee");
 
 
 
-function printFileLines() {
-    console.log("reached one1.5");
-  fetch('/regionLists/countryData.txt')
-    .then(response => response.text())
-    .then(text => text.split('\n'))
-    .then(lines => lines.forEach(line => console.log(line)));
-}
-
-console.log("reached one1");
-printFileLines();
-console.log("reached one2");
-
 
 
 // read in the country names from countryData.txt and add them to globalCountryList array
