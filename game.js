@@ -35,11 +35,11 @@ function readTextFile(file, arrayName) {
 var pageName = window.location.pathname.split("/").pop();
 console.log("pageName = " + pageName);
 if(pageName == "index.html") readTextFile('/regionLists/countryData.txt', globalCountryList);
-else if(pageName == "unitedStates.html") {
+else if(pageName == "unitedStates.html" || pageName == "unitedstates") {
     console.log("reached0");
     readTextFile('/regionLists/americanStatesData.txt', globalCountryList);
 }
-else if(pageName == "centralAndSouthAmerica.html") {
+else if(pageName == "centralAndSouthAmerica.html" || pageName == "centralandsouthamerica") {
     var unorderedCountries = [];
     readTextFile('/regionLists/centralAndSouthAmericaCountries.txt', unorderedCountries);
     readTextFile('/regionLists/countryData.txt', globalCountryList);
