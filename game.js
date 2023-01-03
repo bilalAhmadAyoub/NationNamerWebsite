@@ -15,9 +15,13 @@ console.log("reached onee");
 function readTextFile(file, arrayName) {
     console.log("reached 2");
     let rawFile = new XMLHttpRequest();
+    console.log("reached 2.1");
     rawFile.open("GET", file, false);
+    console.log("reached 2.2");
     rawFile.onreadystatechange = function () {
+        console.log("reached 2.3");
       if (rawFile.readyState === 4) {
+          console.log("reached 2.4");
         if (rawFile.status === 200 || rawFile.status == 0) {
             console.log("reached 3");
           let allText = rawFile.responseText;
