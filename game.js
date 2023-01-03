@@ -37,10 +37,10 @@ function readTextFile(file, arrayName) {
   console.log("reached 5");
 
 //let's read in the region names, depending on which map we are using
-var pageName = window.location.pathname.split("/").pop();
+var pageName = document.title;
 console.log("pageName is " + pageName);
 console.log("document title is " + document.title);
-if(pageName == "index.html"){
+if(pageName == "Nation Namer"){
     console.log("reached a");
     readTextFile('/regionLists/countryData.txt', globalCountryList);
     console.log("reached b");
