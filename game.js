@@ -38,6 +38,7 @@ function readTextFile(file, arrayName) {
 
 //let's read in the region names, depending on which map we are using
 var pageName = window.location.pathname.split("/").pop();
+console.log("pathname is " + pathName);
 if(pageName == "index.html"){
     console.log("reached a");
     readTextFile('/regionLists/countryData.txt', globalCountryList);
