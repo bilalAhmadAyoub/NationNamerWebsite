@@ -10,7 +10,7 @@ var score = 0
 var gameOver = false
 
 
-console.log("reached one");
+console.log("reached onee");
 // read in the country names from countryData.txt and add them to globalCountryList array
 function readTextFile(file, arrayName) {
     console.log("reached 2");
