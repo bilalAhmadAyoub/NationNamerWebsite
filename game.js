@@ -181,7 +181,9 @@ function ready(){
 //this function modifies a the game accordingly when a country is clicked
 function operateCommand(countryNamee, event){
     var countryClicked = event.target
-    //console.log("you clicked " + countryNamee)
+    console.log("you clicked ." + countryNamee + ".");
+    console.log("you should have clicked ." + currentCountry + ".");
+    if(!gameOver) console.log("game isnt over yet!");
     if(currentCountry == countryNamee && !gameOver){
         
         countryClicked.style.cssText = 'fill: green !important';
