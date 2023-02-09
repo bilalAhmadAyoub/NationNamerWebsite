@@ -90,7 +90,7 @@ function ready(){
         var countryButtonList = document.getElementsByClassName(countryList[j])
         for (var i = 0; i < countryButtonList.length; i++){
             var countryButton = countryButtonList[i]
-            console.log("this should be one or zero: " + countryButtonList.length);
+            console.log("this should be one: " + countryButtonList.length + ", state: " + countryList[j]);
             countryButton.addEventListener('click', operateCommand.bind(null, countryList[j]), false)
         }
     }
