@@ -1,4 +1,5 @@
 California
+West Virginia
 Texas
 Florida
 New York
@@ -36,7 +37,6 @@ Kansas
 New Mexico
 Nebraska
 Idaho
-West Virginia
 Hawaii
 New Hampshire
 Maine
