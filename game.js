@@ -90,7 +90,6 @@ function ready(){
         var countryButtonList = document.getElementsByClassName(countryList[j])
         for (var i = 0; i < countryButtonList.length; i++){
             var countryButton = countryButtonList[i]
-            console.log("this should be one: " + countryButtonList.length + ", state: " + countryList[j]);
             countryButton.addEventListener('click', operateCommand.bind(null, countryList[j]), false)
         }
     }
@@ -100,7 +99,6 @@ function ready(){
         var countryButtonList = document.getElementsByName(countryList[j])
         for (var i = 0; i < countryButtonList.length; i++){
             var countryButton = countryButtonList[i]
-            console.log("this should be one or zero: " + countryButtonList.length);
             countryButton.addEventListener('click', operateCommand.bind(null, countryList[j]), false)
         }
     }
@@ -108,7 +106,6 @@ function ready(){
 
     //do the difficulty levels
     document.querySelector('.hard-mode-button').addEventListener('click', function() {
-        //console.log("reached");
         var svgPaths = document.querySelectorAll('svg path');
         for (var path of svgPaths) path.style.stroke = "grey";
         this.style.backgroundColor = "green";
@@ -117,7 +114,6 @@ function ready(){
     });
 
     document.querySelector('.normal-mode-button').addEventListener('click', function() {
-        //console.log("reached");
         var svgPaths = document.querySelectorAll('svg path');
         for (var path of svgPaths) path.style.stroke = "var(--water-color)";
         this.style.backgroundColor = "green";
@@ -130,7 +126,6 @@ function ready(){
     //do the hint
     if(document.querySelector('.hint-button') != undefined){
         document.querySelector('.hint-button').addEventListener('click', function() {
-            //console.log("hint reached");
             //find the continent of currentCountry
             var africanCountries = [];
             var asianCountries = [];
@@ -145,27 +140,22 @@ function ready(){
             oceanianAndNorthAmericanCountries = globalCountryList.filter(item => !africanCountries.includes(item) && !asianCountries.includes(item) && !europeanCountries.includes(item) && !centralAndSouthAmericanCountries.includes(item));
             
             if(africanCountries.includes(currentCountry)) {
-                //console.log("is african");
                 changeCountryArrayColor(africanCountries, "lightgrey");
                 delay(2).then(() => changeCountryArrayColor(africanCountries, "grey"));
             }
             else if(europeanCountries.includes(currentCountry)) {
-                //console.log("is european");
                 changeCountryArrayColor(europeanCountries, "lightgrey");
                 delay(2).then(() => changeCountryArrayColor(europeanCountries, "grey"));
             }
             else if(asianCountries.includes(currentCountry)) {
-                //console.log("is asian");
                 changeCountryArrayColor(asianCountries, "lightgrey");
                 delay(2).then(() => changeCountryArrayColor(asianCountries, "grey"));
             }
             else if(centralAndSouthAmericanCountries.includes(currentCountry)) {
-                //console.log("is south american");
                 changeCountryArrayColor(centralAndSouthAmericanCountries, "lightgrey");
                 delay(2).then(() => changeCountryArrayColor(centralAndSouthAmericanCountries, "grey"));
             }
             else if(oceanianAndNorthAmericanCountries.includes(currentCountry)) {
-                //console.log("is oceanian");
                 changeCountryArrayColor(oceanianAndNorthAmericanCountries, "lightgrey");
                 delay(2).then(() => changeCountryArrayColor(oceanianAndNorthAmericanCountries, "grey"));
             }
@@ -176,16 +166,12 @@ function ready(){
     
         
     //display the first country the player needs to select
-    //console.log(currentCountry + "***" + globalCountryList.length);
     document.getElementById("country-name").textContent = currentCountry.toUpperCase();
 }
 
 //this function modifies a the game accordingly when a country is clicked
 function operateCommand(countryNamee, event){
     var countryClicked = event.target
-    console.log("you clicked ." + countryNamee + ".");
-    console.log("you should have clicked ." + currentCountry + ".");
-    if(!gameOver) console.log("game isnt over yet!");
     if(currentCountry == countryNamee && !gameOver){
         
         countryClicked.style.cssText = 'fill: green !important';
@@ -193,7 +179,6 @@ function operateCommand(countryNamee, event){
 
         //update score
         score++;
-        //console.log("score: " + score)
         if(score < 10) document.getElementById("level-number").textContent = "0" + score;
         else document.getElementById("level-number").textContent = "" + score;
         
@@ -202,7 +187,6 @@ function operateCommand(countryNamee, event){
             currentCountry = globalCountryList[globalCountryListIterator++]
         
             //update displayed country
-            //console.log("now find the country: " + currentCountry)
             document.getElementById("country-name").textContent = currentCountry.toUpperCase();
         }
         else{
