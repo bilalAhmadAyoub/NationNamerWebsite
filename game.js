@@ -90,6 +90,7 @@ function ready(){
         var countryButtonList = document.getElementsByClassName(countryList[j])
         for (var i = 0; i < countryButtonList.length; i++){
             var countryButton = countryButtonList[i]
+            console.log("this should be one or zero: " + countryButtonList.length);
             countryButton.addEventListener('click', operateCommand.bind(null, countryList[j]), false)
         }
     }
@@ -99,6 +100,7 @@ function ready(){
         var countryButtonList = document.getElementsByName(countryList[j])
         for (var i = 0; i < countryButtonList.length; i++){
             var countryButton = countryButtonList[i]
+            console.log("this should be one or zero: " + countryButtonList.length);
             countryButton.addEventListener('click', operateCommand.bind(null, countryList[j]), false)
         }
     }
