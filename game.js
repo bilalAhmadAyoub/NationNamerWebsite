@@ -1,4 +1,3 @@
-
 var globalCountryList = [];
 var correctlySelectedCountries = [];
 var hardMode = false;
@@ -29,37 +28,17 @@ function readTextFile(file, arrayName) {
   }
 
 
-
 //let's read in the region names, depending on which map we are using
 var pageName = window.location.pathname.split("/").pop();
+
 if(pageName == "index.html" || pageName == "") readTextFile('/regionLists/countryData.txt', globalCountryList);
-else if(pageName == "unitedStates.html" || pageName == "unitedstates") {
+else if(pageName == "unitedStates.html" || pageName == "unitedstates")
     readTextFile('/regionLists/americanStatesData.txt', globalCountryList);
-}
-else if(pageName == "centralAndSouthAmerica.html" || pageName == "centralandsouthamerica") {
-    var unorderedCountries = [];
-    readTextFile('/regionLists/centralAndSouthAmericaCountries.txt', unorderedCountries);
-    readTextFile('/regionLists/countryData.txt', globalCountryList);
-    globalCountryList = globalCountryList.filter(item => unorderedCountries.includes(item));
-}
-else if(pageName == "asia.html") {
-    var unorderedCountries = [];
-    readTextFile('/regionLists/asiaCountries.txt', unorderedCountries);
-    readTextFile('/regionLists/countryData.txt', globalCountryList);
-    globalCountryList = globalCountryList.filter(item => unorderedCountries.includes(item));
-}
-else if(pageName == "africa.html") {
-    var unorderedCountries = [];
-    readTextFile('/regionLists/africaCountries.txt', unorderedCountries);
-    readTextFile('/regionLists/countryData.txt', globalCountryList);
-    globalCountryList = globalCountryList.filter(item => unorderedCountries.includes(item));
-}
-else if(pageName == "europe.html") {
-    var unorderedCountries = [];
-    readTextFile('/regionLists/europeCountries.txt', unorderedCountries);
-    readTextFile('/regionLists/countryData.txt', globalCountryList);
-    globalCountryList = globalCountryList.filter(item => unorderedCountries.includes(item));
-}
+else if(pageName == "centralAndSouthAmerica.html" || pageName == "centralandsouthamerica")
+    readTextFile('/regionLists/centralAndSouthAmericaCountries.txt', globalCountryList);
+else if(pageName == "asia.html") readTextFile('/regionLists/asiaCountries.txt', globalCountryList);
+else if(pageName == "africa.html") readTextFile('/regionLists/africaCountries.txt', globalCountryList);
+else if(pageName == "europe.html") readTextFile('/regionLists/europeCountries.txt', globalCountryList);
 else if(pageName == "india.html") readTextFile('/regionLists/indiaStates.txt', globalCountryList);
 else if(pageName == "canada.html") readTextFile('/regionLists/canadaProvinces.txt', globalCountryList);
 else if(pageName == "china.html") readTextFile('/regionLists/chinaProvinces.txt', globalCountryList);

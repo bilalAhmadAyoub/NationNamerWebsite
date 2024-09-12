@@ -1,46 +1,46 @@
-Afghanistan
-United Arab Emirates
-Armenia
-North Korea
-Azerbaijan
-Bangladesh
-Bhutan
 China
-Indonesia
 India
-Iran
-Iraq
-Israel
-Jordan
+Indonesia
+Pakistan
+Bangladesh
 Japan
-Kazakhstan
-Kyrgyzstan
-Cambodia
+Philippines
+Vietnam
+Iran
+Turkey
+Thailand
+Myanmar
 South Korea
-Kuwait
+Iraq
+Uzbekistan
+Saudi Arabia
+Afghanistan
+Malaysia
+Yemen
+Nepal
+North Korea
+Taiwan
+Sri Lanka
+Kazakhstan
+Syria
+Cambodia
+Jordan
+Azerbaijan
+Tajikistan
+United Arab Emirates
+Israel
 Laos
 Lebanon
-Sri Lanka
-Brunei
-Myanmar
-Mongolia
-Malaysia
-Nepal
-Oman
-Pakistan
-Philippines
-Palestine
-Qatar
-Saudi Arabia
-Syria
-Thailand
-Tajikistan
+Kyrgyzstan
 Turkmenistan
-East Timor
-Turkey
-Taiwan
-Uzbekistan
-Vietnam
-Yemen
+Palestine
+Kuwait
+Oman
+Mongolia
+Armenia
+Qatar
 Bahrain
+East Timor
+Bhutan
 Malta
+Brunei

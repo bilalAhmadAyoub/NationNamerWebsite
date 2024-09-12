@@ -1,51 +1,45 @@
-Argentina
-Belize
-Bolivia
 Brazil
 Colombia
-Costa Rica
-Cuba
-Dominican Republic
-Ecuador
-Guatemala
-Guyana
-Honduras
-Haiti
-Jamaica
-Nicaragua
-Panama
+Argentina
 Peru
-Paraguay
-El Salvador
-Uruguay
 Venezuela
 Chile
-French Guiana
-Aruba
-Anguilla
-Antigua and Barbuda
-Bahamas
-SaintBarthélemy
-Bermuda
-Barbados
-Curaçao
-Cayman Islands
-Dominica
-Falkland Islands
-Grenada
-Guam
-Suriname
-Saint Kitts and Nevis
-Saint Lucia
-SaintMartin
-Montserrat
+Ecuador
+Guatemala
+Bolivia
+Haiti
+Cuba
+Dominican Republic
+Honduras
+Paraguay
+El Salvador
+Nicaragua
+Costa Rica
+Panama
+Uruguay
 Puerto Rico
-Sint Maarten
-Turks and Caicos Islands
+Jamaica
 Trinidad and Tobago
+Guyana
+Suriname
+Belize
+Bahamas
+Barbados
+Saint Lucia
+Guam
+Curaçao
+Grenada
+Aruba
 Saint Vincent and the Grenadines
-British Virgin Islands
+Antigua and Barbuda
 United States Virgin Islands
-Martinique
-Guadeloupe
-French Guiana
+Dominica
+Cayman Islands
+Bermuda
+Saint Kitts and Nevis
+Turks and Caicos Islands
+Sint Maarten
+British Virgin Islands
+Anguilla
+Montserrat
+Falkland Islands
