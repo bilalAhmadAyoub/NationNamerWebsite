@@ -27,28 +27,32 @@ function readTextFile(file, arrayName) {
     rawFile.send(null);
   }
 
-
-//let's read in the region names, depending on which map we are using
+// Read in the map regions
 var pageName = window.location.pathname.split("/").pop();
 
-if(pageName == "index.html" || pageName == "") readTextFile('/regionLists/countryData.txt', globalCountryList);
-else if(pageName == "unitedStates.html" || pageName == "unitedstates")
-    readTextFile('/regionLists/americanStatesData.txt', globalCountryList);
-else if(pageName == "centralAndSouthAmerica.html" || pageName == "centralandsouthamerica")
-    readTextFile('/regionLists/centralAndSouthAmericaCountries.txt', globalCountryList);
-else if(pageName == "asia.html") readTextFile('/regionLists/asiaCountries.txt', globalCountryList);
-else if(pageName == "africa.html") readTextFile('/regionLists/africaCountries.txt', globalCountryList);
-else if(pageName == "europe.html") readTextFile('/regionLists/europeCountries.txt', globalCountryList);
-else if(pageName == "india.html") readTextFile('/regionLists/indiaStates.txt', globalCountryList);
-else if(pageName == "canada.html") readTextFile('/regionLists/canadaProvinces.txt', globalCountryList);
-else if(pageName == "china.html") readTextFile('/regionLists/chinaProvinces.txt', globalCountryList);
-else if(pageName == "germany.html") readTextFile('/regionLists/germanyStates.txt', globalCountryList);
+const fileMap = {
+    "": "/regionLists/countryData.txt",
+    "index.html": "/regionLists/countryData.txt",
+    "unitedStates.html": "/regionLists/americanStatesData.txt",
+    "unitedstates": "/regionLists/americanStatesData.txt",
+    "centralAndSouthAmerica.html": "/regionLists/centralAndSouthAmericaCountries.txt",
+    "centralandsouthamerica": "/regionLists/centralAndSouthAmericaCountries.txt",
+    "asia.html": "/regionLists/asiaCountries.txt",
+    "africa.html": "/regionLists/africaCountries.txt",
+    "europe.html": "/regionLists/europeCountries.txt",
+    "india.html": "/regionLists/indiaStates.txt",
+    "canada.html": "/regionLists/canadaProvinces.txt",
+    "china.html": "/regionLists/chinaProvinces.txt",
+    "germany.html": "/regionLists/germanyStates.txt",
+};
+
+readTextFile(fileMap[pageName], globalCountryList);
 
 //now let's semi-shuffle that list
 var shuffleGroupSize = 10 //change this val to change how shuffled the list is
 for(var p = 0; p < globalCountryList.length; p += shuffleGroupSize){
-    var q = Math.min(p + shuffleGroupSize, globalCountryList.length);
-    shuffle(globalCountryList, p, q);
+    const groupToShuffle = globalCountryList.slice(p, p + shuffleGroupSize);
+    globalCountryList.splice(p, shuffleGroupSize, ...shuffle(groupToShuffle));
 }
 
 
@@ -202,22 +206,13 @@ function operateCommand(countryNamee, event){
     
 }
 
-//this function shuffles array from index start up until index end (start included, end not included)
-function shuffle(array, start, end) {
-    let randomIndex = 0;
-    let currentIndex = end - start;
-    
-    //go through each element in array (backwards)
-    while (currentIndex != 0) {
-  
-      //from the remaining elements, select one at random
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      //swap the item at currentIndex with the one at randomIndex
-      [array[currentIndex + start], array[randomIndex + start]] = [array[randomIndex + start], array[currentIndex + start]];
+//this function shuffles an array
+function shuffle(array) {    
+    for (var i = array.length - 1; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * i);
+        [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
     }
-  
+
     return array;
 }
 
