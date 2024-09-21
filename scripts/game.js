@@ -52,8 +52,8 @@ function initializeGame() {
     const pageMap = {
         "": "countryData",
         "index": "countryData",
-        "unitedStates": "americanStatesData",
-        "centralAndSouthAmerica": "centralAndSouthAmericaCountries",
+        "unitedstates": "americanStatesData",
+        "centralandsouthamerica": "centralAndSouthAmericaCountries",
         "asia": "asiaCountries",
         "africa": "africaCountries",
         "europe": "europeCountries",
@@ -64,7 +64,7 @@ function initializeGame() {
     };
 
     // Read country data based on the current page
-    const pageName = window.location.pathname.split("/").pop().replace(".html", "");
+    const pageName = window.location.pathname.split("/").pop().replace(".html", "").toLowerCase();
     globalCountryList = regionsData[pageMap[pageName]] || [];
 
     // Debugging information
