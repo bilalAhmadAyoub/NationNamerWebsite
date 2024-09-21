@@ -51,22 +51,20 @@ function initializeGame() {
     // Map page names to their corresponding data keys in the JSON
     const pageMap = {
         "": "countryData",
-        "index.html": "countryData",
-        "unitedStates.html": "americanStatesData",
-        "unitedstates": "americanStatesData",
-        "centralAndSouthAmerica.html": "centralAndSouthAmericaCountries",
-        "centralandsouthamerica": "centralAndSouthAmericaCountries",
-        "asia.html": "asiaCountries",
-        "africa.html": "africaCountries",
-        "europe.html": "europeCountries",
-        "india.html": "indiaStates",
-        "canada.html": "canadaProvinces",
-        "china.html": "chinaProvinces",
-        "germany.html": "germanyStates",
+        "index": "countryData",
+        "unitedStates": "americanStatesData",
+        "centralAndSouthAmerica": "centralAndSouthAmericaCountries",
+        "asia": "asiaCountries",
+        "africa": "africaCountries",
+        "europe": "europeCountries",
+        "india": "indiaStates",
+        "canada": "canadaProvinces",
+        "china": "chinaProvinces",
+        "germany": "germanyStates",
     };
 
     // Read country data based on the current page
-    const pageName = window.location.pathname.split("/").pop();
+    const pageName = window.location.pathname.split("/").pop().replace(".html", "");
     globalCountryList = regionsData[pageMap[pageName]] || [];
 
     // Debugging information
