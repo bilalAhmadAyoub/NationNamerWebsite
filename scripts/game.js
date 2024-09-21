@@ -69,6 +69,10 @@ function initializeGame() {
     const pageName = window.location.pathname.split("/").pop();
     globalCountryList = regionsData[pageMap[pageName]] || [];
 
+    // Debugging information
+    console.log("Debugging information:");
+    console.log(pageName);
+    console.log(pageMap[pageName]);
     console.log(globalCountryList);
 
     // Semi-shuffle the country list
